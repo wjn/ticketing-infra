@@ -14,10 +14,10 @@ spec:
       containers:
         - name: auth
           image: wjn1/ticketing-auth
-          resources:
-            limits:
-              memory: '128Mi'
-              cpu: '500m'
+          # resources:
+          #   limits:
+          #     memory: '256Mi'
+          #     cpu: '500m'
 ---
 apiVersion: v1
 # defaults to cluster IP
