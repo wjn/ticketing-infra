@@ -1,5 +1,5 @@
 import mongoose, { Mongoose } from 'mongoose';
-import { Password } from '../services/password';
+import { PasswordManager } from '../services/password-manager';
 
 // interface describing new User properties
 interface UserAttrs {
@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema(
 userSchema.pre('save', async function (done): Promise<void> {
   // returns true on create
   if (this.isModified('password')) {
-    const hashed = await Password.toHash(this.get('password'));
+    const hashed = await PasswordManager.toHash(this.get('password'));
     this.set('password', hashed);
   }
   done();

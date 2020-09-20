@@ -8,8 +8,6 @@ import { BadRequestError } from '../errors/bad-request-error';
 
 const router = express.Router();
 
-console.log('signup route loading');
-
 router.post(
   '/api/users/signup',
   [
@@ -27,8 +25,6 @@ router.post(
     if (existingUser) {
       throw new BadRequestError('Email is in use already');
     }
-
-    // TODO: password hashing
 
     const user = User.build({ email, password });
     await user.save();
