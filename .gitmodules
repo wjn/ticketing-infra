@@ -4,3 +4,6 @@
 [submodule "client"]
 	path = client
 	url = git@github.com:wjn/ms-client.git
+[submodule "lib"]
+	path = lib
+	url = git@github.com:wjn/ms-lib.git
