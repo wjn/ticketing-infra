@@ -20,10 +20,6 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-          resources:
-            limits:
-              memory: '1024Mi'
-              cpu: '1000m'
 ---
 apiVersion: v1
 # defaults to cluster IP

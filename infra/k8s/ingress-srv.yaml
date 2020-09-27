@@ -14,3 +14,8 @@ spec:
             backend:
               serviceName: auth-srv
               servicePort: 3000
+          # Catchall path ⬇️
+          - path: /?(.*)
+            backend:
+              serviceName: client-srv
+              servicePort: 3000
