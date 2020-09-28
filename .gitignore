@@ -1,3 +1,6 @@
+# Common files for the common npm dir
+common
+
 # Logs
 logs
 *.log
