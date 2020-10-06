@@ -16,12 +16,12 @@ spec:
         - name: nats
           image: nats-streaming:0.17.0
           # cli args, need to be in this order
-          args:
-            [
+          args: [
               '--port',
               '4222',
               '--http_port',
               '8222',
+              # hb = heartbeat
               '--hb_interval',
               '5s',
               '--hb_timeout',
@@ -32,6 +32,11 @@ spec:
               '--cluster_id',
               'ticketing',
             ]
+          resources:
+            limits:
+              memory: '128Mi'
+              cpu: '500m'
+
 ---
 apiVersion: v1
 kind: Service
