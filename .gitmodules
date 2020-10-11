@@ -7,3 +7,6 @@
 [submodule "tickets"]
 	path = tickets
 	url = git@github.com:wjn/ms-tickets.git
+[submodule "orders"]
+	path = orders
+	url = git@github.com:wjn/orders-ms.git
