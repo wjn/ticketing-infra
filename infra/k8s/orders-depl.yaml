@@ -14,11 +14,9 @@ spec:
       containers:
         - name: orders
           image: wjn1/ticketing-orders
-          resources:
-            limits:
-              memory: '512Mi'
-              cpu: '500m'
           env:
+            - name: EXPIRATION_WINDOW_SECONDS
+              value: '900'
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
