@@ -1,0 +1,42 @@
+@hostname = ticketing.dev
+@port = 80
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+### 
+# Authentication
+@name = signup
+@service = users
+POST https://{{hostname}}/api/users/signup
+Content-Type: {{contentType}}
+{
+    "email": "wjnielsen@pm.me",
+    "password": "password"
+}
+
+###
+
+# @name = signin
+# @service = users
+# POST https://{{hostname}}/api/{{service}}/{{name}}
+# Content-Type: {{contentType}}
+# {
+#     "email": "wjnielsen@pm.me",
+#     "password": "password"
+# }
+
+# ### 
+# @authToken = {{Cookie: express:sess}}
+
+# @name = currentuser
+# @service = users
+# GET https://{{hostname}}/api/{{service}}/{{name}}
+# Content-Type: {{contentType}}
+
+
+
+# Ticketing
+@name = get-
+https://{{hostname}}/api/
