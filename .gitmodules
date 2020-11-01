@@ -10,3 +10,6 @@
 [submodule "orders"]
 	path = orders
 	url = git@github.com:wjn/orders-ms.git
+[submodule "expiration"]
+	path = expiration
+	url = git@github.com:wjn/ms-expiration.git
