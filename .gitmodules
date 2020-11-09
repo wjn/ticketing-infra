@@ -13,3 +13,6 @@
 [submodule "expiration"]
 	path = expiration
 	url = git@github.com:wjn/ms-expiration.git
+[submodule "payments"]
+	path = payments
+	url = git@github.com:wjn/ms-payments.git
